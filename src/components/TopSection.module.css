@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.headerScrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.headerNotScrolled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.lineContainer {
+    width: 80rem;
+    height: 2px;
+    background-color: transparent;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background-color: orange;
+    animation: fillLine 2s linear infinite;
+}
+
+@keyframes fillLine {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
