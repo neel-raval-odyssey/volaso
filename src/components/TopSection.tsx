@@ -91,11 +91,11 @@ const TopSection: React.FC = () => {
         </p>
 
         {/* Animated line near the car */}
-        <div style={{ marginLeft: '30rem', marginTop: '-2.1rem'}}>
+        {/* <div style={{ marginLeft: '30rem', marginTop: '-2.1rem'}}>
             <div className={styles.lineContainer}>
                 <div className={styles.line}></div>
             </div>
-        </div>
+        </div> */}
         {/* <div className="relative" style={{ marginTop: '-2.1rem' }}>
             <div className={styles.lineContainer} style={{ position: 'absolute', left: '60rem' }}>
                 <div className={styles.line}></div>
