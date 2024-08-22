@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
-import styles from './VisionSection.module.css'; // Import the external CSS file
+import { motion } from "framer-motion"
+import styles from './VisionSection.module.css';
 
 const VisionSection: React.FC = () => {
   return (
@@ -15,9 +18,17 @@ const VisionSection: React.FC = () => {
       {/* Text Section */}
       <div className={`pl-20 mt-8 ${styles.textContainer}`}>
         <h6 className="text-sm text-left">VISION</h6>
-        <h1 className="text-7xl md:text-9xl font-bold mt-4 leading-tight">
+
+        {/* Animated Heading */}
+        <motion.h1
+          className="text-7xl md:text-9xl font-bold mt-4 leading-tight"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
+        >
           We’re Here to Revolutionize the World of Local Shipping
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Content Section */}
@@ -36,7 +47,7 @@ const VisionSection: React.FC = () => {
           <img
             src="https://static.wixstatic.com/media/84770f_4768df327fc14639ab855ebaa4699255~mv2.jpg/v1/fill/w_147,h_104/Robot_Dark_Background.jpg"
             alt="Vision Image"
-            className="object-contain w-screen"
+            className="object-contain w-1/2"
           />
         </div>
       </div>
