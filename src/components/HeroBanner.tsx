@@ -3,10 +3,10 @@ import React from "react";
 const HeroBanner: React.FC = () => {
   return (
     <section
-      className="relative flex items-center justify-start h-[500px] bg-cover bg-center"
+      className="relative flex items-center justify-start h-screen bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://static.wixstatic.com/media/c837a6_518925604ea94963890d43b5f41aa5bff000.jpg')",
+          "url('https://static.wixstatic.com/media/84770f_4768df327fc14639ab855ebaa4699255~mv2.jpg/v1/fill/w_147,h_104/Robot_Dark_Background.jpg')",
       }}
     >
       <div className="bg-opacity-50 p-8 text-white max-w-md ml-8">

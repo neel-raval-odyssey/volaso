@@ -6,7 +6,7 @@ import styles from './VisionSection.module.css';
 
 const VisionSection: React.FC = () => {
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-black text-white py-16 w-screen h-screen">
       {/* Central Line */}
       <div className="flex justify-center">
         <div className="w-11/12 flex">
@@ -21,11 +21,10 @@ const VisionSection: React.FC = () => {
 
         {/* Animated Heading */}
         <motion.h1
-          className="text-7xl md:text-9xl font-bold mt-4 leading-tight"
+          className="text-8xl md:text-8xl font-bold mt-4 leading-tight"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          viewport={{ once: true }}
         >
           We’re Here to Revolutionize the World of Local Shipping
         </motion.h1>
