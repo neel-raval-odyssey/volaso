@@ -55,7 +55,7 @@ const Card: React.FC<CardProps> = ({i, title, description, src, url, color, prog
                         </span>
                         <span className={styles.type}>{type2}</span>
                     </div>
-                    <p className='mt-2' style={{maxWidth: '20vw'}}>{description}</p>
+                    <p className='mt-2' style={{maxWidth: '40vw'}}>{description}</p>
                 </div>
             <div className={styles.imageContainer}>
                 <motion.div

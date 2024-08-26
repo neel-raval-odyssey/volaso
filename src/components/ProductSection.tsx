@@ -3,9 +3,9 @@ import styles from './ProductSection.module.css';
 import { projects } from './data';
 import Card from './Cards';
 import { useScroll } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Lenis from 'lenis';
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const ProductSection: React.FC = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -13,6 +13,39 @@ const ProductSection: React.FC = () => {
     target: container,
     offset: ['start start', 'end end']
   });
+  
+  const controls = useAnimation();
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ width: '10%' });
+    } else {
+      controls.start({ width: '0%' });
+    }
+  }, [inView, controls]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -31,11 +64,16 @@ const ProductSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-white text-black py-16 w-screen h-screen">
+    <section ref={sectionRef} className="bg-white text-black py-16 w-screen h-screen">
       {/* Central Line */}
       <div className="flex justify-center">
         <div className="w-11/12 flex">
-          <div className="h-0.5 bg-black" style={{ width: '10%' }}></div>
+          <motion.div
+            className="h-0.5 bg-black"
+            initial={{ width: '0%' }}
+            animate={controls}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          ></motion.div>
           <div className="h-0.5 bg-gray-200" style={{ width: '90%' }}></div>
         </div>
       </div>
