@@ -40,6 +40,7 @@ const Card: React.FC<CardProps> = ({i, title, description, src, url, color, prog
         style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 25}px)`}} 
         className={styles.card}
       >
+        <div className={styles.verticalLine}></div>
         <h2>{title}</h2>
         <div className={styles.body}>
           <div className={styles.metrics}>

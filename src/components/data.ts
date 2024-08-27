@@ -38,20 +38,4 @@ export const projects = [
     type2: "Improved Reaction Time",
     color: "#ffffff",
   },
-  // {
-  //   title: "Mathias Svold and Ulrik Hasemann",
-  //   description:
-  //     "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-  //   src: "house.jpg",
-  //   link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-  //   color: "#B62429",
-  // },
-  // {
-  //   title: "Mark Rammers",
-  //   description:
-  //     "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
-  //   src: "cactus.jpg",
-  //   link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-  //   color: "#88A28D",
-  // },
 ];

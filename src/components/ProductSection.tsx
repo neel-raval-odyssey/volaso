@@ -41,7 +41,7 @@ const ProductSection: React.FC = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ width: '10%' });
+      controls.start({ width: '66%' });
     } else {
       controls.start({ width: '0%' });
     }
@@ -74,7 +74,7 @@ const ProductSection: React.FC = () => {
             animate={controls}
             transition={{ duration: 1, ease: 'easeOut' }}
           ></motion.div>
-          <div className="h-0.5 bg-gray-200" style={{ width: '90%' }}></div>
+          <div className="h-0.5 bg-gray-200" style={{ width: '34%' }}></div>
         </div>
       </div>
 

@@ -33,7 +33,7 @@ const WhyVolaso: React.FC = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ width: '10%' });
+      controls.start({ width: '90%' });
     } else {
       controls.start({ width: '0%' });
     }
@@ -50,7 +50,7 @@ const WhyVolaso: React.FC = () => {
             animate={controls}
             transition={{ duration: 1, ease: 'easeOut' }}
           ></motion.div>
-          <div className="h-0.5 bg-gray-500" style={{ width: '90%' }}></div>
+          <div className="h-0.5 bg-gray-500" style={{ width: '10%' }}></div>
         </div>
       </div>
 
