@@ -34,13 +34,20 @@ const Card: React.FC<CardProps> = ({i, title, description, src, url, color, prog
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  // Define classes for different line patterns
+  const lineClass = `${styles.verticalLine} ${
+    i === 0 ? styles.firstLine :
+    i === 1 ? styles.secondLine :
+    i === 2 ? styles.thirdLine : ''
+  }`;
+
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div 
         style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 25}px)`}} 
         className={styles.card}
       >
-        <div className={styles.verticalLine}></div>
+        <div className={lineClass}></div>
         <h2>{title}</h2>
         <div className={styles.body}>
           <div className={styles.metrics}>

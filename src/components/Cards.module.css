@@ -90,21 +90,57 @@
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.verticalLine {
+.cardContainer .card .verticalLine {
     position: absolute;
     left: 1.5%;
     top: 50%;
     transform: translateY(-50%);
-    height: 80%;
     width: 0.1rem;
-    background-color: gray;
     overflow: hidden;
 }
 
-.verticalLine::before {
+/* First card: 0-33% black */
+.firstLine {
+    height: 80%;
+    background-color: gray;
+}
+
+.firstLine::before {
     content: '';
     position: absolute;
     top: 0;
+    left: 0;
+    height: 33.33%;
+    width: 100%;
+    background-color: black;
+}
+
+/* Second card: 0-33% gray, 33%-66% black, 66%-100% gray */
+.secondLine {
+    height: 80%;
+    background-color: gray;
+}
+
+.secondLine::before {
+    content: '';
+    position: absolute;
+    top: 33.33%;
+    left: 0;
+    height: 33.33%;
+    width: 100%;
+    background-color: black;
+}
+
+/* Third card: 0-66% gray, 66%-100% black */
+.thirdLine {
+    height: 80%;
+    background-color: gray;
+}
+
+.thirdLine::before {
+    content: '';
+    position: absolute;
+    top: 66.66%;
     left: 0;
     height: 33.33%;
     width: 100%;
