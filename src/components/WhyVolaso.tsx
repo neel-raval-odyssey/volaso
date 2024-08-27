@@ -88,16 +88,16 @@ const WhyVolaso: React.FC = () => {
             Briefly explain who's behind it, what it does and what makes it
             unique. Share its core values and what this site has to offer.
           </p>
-<span className="inline-flex items-center group relative">
-  <span className="flex items-center relative z-10 text-gray-500 group-hover:text-white transition-colors duration-300">
-    Read More 
-    <ArrowRightIcon className="h-6 w-6 ml-2 group-hover:hidden" />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-6 w-6 ml-2 hidden group-hover:inline-flex">
-      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-    </svg>
-  </span>
-  <span className="absolute bottom-[-2px] left-0 w-full h-[1px] bg-gray-500 group-hover:bg-white transition-colors duration-300"></span>
-</span>
+          <span className="inline-flex items-center group relative">
+            <span className="flex items-center relative z-10 text-gray-500 group-hover:text-white transition-colors duration-300">
+              Read More 
+              <ArrowRightIcon className="h-6 w-6 ml-2 group-hover:hidden" />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-6 w-6 ml-2 hidden group-hover:inline-flex">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+              </svg>
+            </span>
+            <span className="absolute bottom-[-2px] left-0 w-full h-[1px] bg-gray-500 group-hover:bg-white transition-colors duration-300"></span>
+          </span>
         </div>
       </div>
 
